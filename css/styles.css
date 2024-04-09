@@ -1,0 +1,79 @@
+.agendar-button {
+    background-color: #ffffff;
+    color: #ffb6dd;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega una transición suave para el color de fondo y el color del texto */
+}
+
+.agendar-button:hover {
+    background-color: #f4f4f4; /* Cambia el color de fondo al pasar el ratón */
+    color: #ff95ac; /* Cambia el color del texto al pasar el ratón */
+}
+
+.navbar {
+    background-color: #ffb6dd;
+    height: 100px;
+}
+
+.navbar-brand {
+    margin-left: 100px; /* Ajusta el margen derecho del logo */
+}
+
+.agendar-button {
+    margin-right: 100px; /* Ajusta el margen izquierdo del botón */
+}
+
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(247, 247, 247);
+    font-weight: 500;
+    position: relative;
+}
+
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: rgb(255, 255, 255);
+}
+
+.presentacion {
+    background-color: #fbf1f2; /* Color rosa */
+    padding: 40px;
+    border-radius: 20px 20px 0 0; /* Parte inferior redondeada */
+}
+
+
+@media(min-width: 991px){
+    
+    .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #ffffff;
+        transition: width 0.3s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+        width: 100%;
+    }
+
+}
