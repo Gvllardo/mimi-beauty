@@ -96,6 +96,8 @@
     /* Parte inferior redondeada */
     text-align: center;
 }
+.container-text-center{
+    padding: 120px;
 
 .presentacion::after {
     content: '';
@@ -167,4 +169,5 @@
         margin: 2px;
         height: 20px;
     }
+}
 }
