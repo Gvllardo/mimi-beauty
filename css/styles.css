@@ -96,9 +96,6 @@
     /* Parte inferior redondeada */
     text-align: center;
 }
-.container-text-center{
-    padding: 120px;
-
 .presentacion::after {
     content: '';
     position: absolute;
@@ -144,6 +141,14 @@
     width: 35px;
 }
 
+.container-text-center{
+    padding: 120px;
+}
+
+.col-md-auto{
+    text-align: center;
+}
+
 /* Media Queries */
 @media (min-width: 991px) {
     .icono {
@@ -169,5 +174,4 @@
         margin: 2px;
         height: 20px;
     }
-}
 }
