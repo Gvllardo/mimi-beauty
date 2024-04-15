@@ -16,6 +16,23 @@
     color: #ff95ac;
     /* Cambia el color del texto al pasar el ratón */
 }
+.button {
+    background-color: #ffb6dd;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Agrega una transición suave para el color de fondo y el color del texto */
+}
+
+.button:hover {
+    background-color: #ffb6dd;
+    /* Cambia el color de fondo al pasar el ratón */
+    color: #ffffff;
+    /* Cambia el color del texto al pasar el ratón */
+}
 
 /* Estilos del navbar */
 .navbar {
