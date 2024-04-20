@@ -1,3 +1,49 @@
+.btn-whatsapp{
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: aliceblue;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 15px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+.btn-whatsapp::after{
+    content: "";
+    line-height: 75px;
+    border-radius: 50px;
+    bottom: 30px;
+    right: 30px;
+    width: 10px;
+    height: 10px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    top: 44.5%;
+    left: 44.5%;
+    transition: .3s ease-in-out all;
+    transform-origin: center;
+}
+.btn-whatsapp:hover::after{
+    transform: scale(7.65);
+    background: white;
+}
+.btn-whatsapp img{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease-in-out all;
+}
+.btn-whatsapp:hover img {
+    filter: brightness(0) invert(0.15) sepia(1) saturate(50) hue-rotate(100deg) contrast(1.2); /* Cambia el color del logo al tono verde más claro */
+  }
+
+
+
 /* Estilos del botón de agendar */
 .agendar-button {
     background-color: #ffffff;
@@ -89,24 +135,24 @@
 
 /* Estilos de la sección de presentación */
 .presentacion {
-    background-color: #fbf1f2;
-    /* Color rosa */
+    background-color: #fbf1f2; /* Color rosa */
     padding: 120px;
-    border-radius: 20px 20px 0 0;
-    /* Parte inferior redondeada */
+    border-radius: 20px 20px 0 0; /* Parte inferior redondeada */
     text-align: center;
+    position: relative; /* Asegura que el contenido absoluto esté relativo a este elemento */
 }
+
 .presentacion::after {
     content: '';
     position: absolute;
-    bottom: -50px; /* Controla la distancia del relieve respecto al borde inferior del div */
+    bottom: -30px; /* Controla la distancia del relieve respecto al borde inferior del div */
     left: 0;
     right: 0;
-    height: 100px; /* Altura del relieve */
-    background: linear-gradient(to bottom, transparent, #ffffff 50%, transparent); /* Gradiente lineal para el efecto de relieve */
-    border-radius: 50%; /* Asegura que el relieve tenga bordes redondeados */
+    height: 60px; /* Altura del relieve */
+    background: radial-gradient(circle at bottom, transparent, #fbf1f2); /* Degradado radial para el efecto de relieve */
     z-index: -1; /* Asegura que el relieve esté detrás del contenido */
 }
+
 
 
 .presentacion .card {
