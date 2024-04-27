@@ -1,3 +1,8 @@
+body {
+    overflow-y: auto;
+}
+
+
 .btn-whatsapp{
     position: fixed;
     width: 75px;
@@ -159,26 +164,9 @@
     position: relative; /* Asegura que el contenido absoluto esté relativo a este elemento */
 }
 
-.presentacion::after {
-    content: '';
-    position: absolute;
-    bottom: -30px; /* Controla la distancia del relieve respecto al borde inferior del div */
-    left: 0;
-    right: 0;
-    height: 60px; /* Altura del relieve */
-    background: radial-gradient(circle at bottom, transparent, #fbf1f2); /* Degradado radial para el efecto de relieve */
-    z-index: -1; /* Asegura que el relieve esté detrás del contenido */
-}
-
-
-
-.presentacion .card {
-    max-width: 690px;
-    /* Ancho máximo para la tarjeta */
-    margin: auto;
-    /* Centra la tarjeta horizontalmente */
-    margin-top: 50px;
-    /* Ajuste el margen superior para espaciarlo del navbar */
+/* Estilo para el enlace activo del navbar */
+.navbar-nav .nav-item.active .nav-link::after {
+    width: 100%;
 }
 
 .title {
@@ -219,20 +207,18 @@
   }
 
   .card-img-top{
-    border-radius: 3rem 3rem;
     border: #f4f4f4;
+    border-radius: 20px;
   }
   
   .card_box {
     width: 200px;
     height: 250px;
-    border-radius: 20px;
     background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
     position: relative;
     box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     cursor: pointer;
     transition: all .3s;
-    border-radius: 3rem;
   }
   
   .card_box:hover {
@@ -252,7 +238,7 @@
   }
   
   .card_box span::before {
-    content: '';
+    content: attr(data-content);
     position: absolute;
     width: 150%;
     height: 40px;
@@ -280,6 +266,53 @@
     background-image: linear-gradient(45deg, #d82377 0%, #f65fb4 51%, #b21a77  100%);
   }
 
+  .container-monitor{
+    display: flex;
+    justify-content: center;
+  }
+
+  article {
+    padding:4em;
+  }
+
+  .monitor {
+    width:750px;
+    height: 400px;
+    overflow-y:scroll;
+    border: solid 1em #333;
+    border-radius:.5em;
+  }
+  .monitor::-webkit-scrollbar {
+        width: 15px;
+  }
+  .monitor::-webkit-scrollbar-thumb {
+    background: #666;
+  }
+  ::-webkit-scrollbar-track {
+        background-color: #888;
+  }
+  .stand:before {
+    content:"";
+    display:block;
+    position:relative;
+    background: #222;
+    width: 150px;
+    height: 50px;
+    top:450px;
+    left:300px;
+  }
+  .stand:after {
+     content:"";
+     display:block;
+     position:relative;
+     background:#333;
+     border-top-left-radius:.5em;
+     border-top-right-radius:.5em;
+     width: 300px;
+     height: 15px;
+     top: 50px;
+     left: 225px;
+  }
 
   
 
