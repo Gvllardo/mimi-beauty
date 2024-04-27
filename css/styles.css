@@ -1,3 +1,8 @@
+body {
+    overflow-y: auto;
+}
+
+
 .btn-whatsapp{
     position: fixed;
     width: 75px;
@@ -159,26 +164,9 @@
     position: relative; /* Asegura que el contenido absoluto esté relativo a este elemento */
 }
 
-.presentacion::after {
-    content: '';
-    position: absolute;
-    bottom: -30px; /* Controla la distancia del relieve respecto al borde inferior del div */
-    left: 0;
-    right: 0;
-    height: 60px; /* Altura del relieve */
-    background: radial-gradient(circle at bottom, transparent, #fbf1f2); /* Degradado radial para el efecto de relieve */
-    z-index: -1; /* Asegura que el relieve esté detrás del contenido */
-}
-
-
-
-.presentacion .card {
-    max-width: 690px;
-    /* Ancho máximo para la tarjeta */
-    margin: auto;
-    /* Centra la tarjeta horizontalmente */
-    margin-top: 50px;
-    /* Ajuste el margen superior para espaciarlo del navbar */
+/* Estilo para el enlace activo del navbar */
+.navbar-nav .nav-item.active .nav-link::after {
+    width: 100%;
 }
 
 .title {
@@ -211,6 +199,12 @@
 .col-md-auto{
     text-align: center;
 }
+
+/* CARDS */
+
+
+
+
 
 /* Media Queries */
 @media (min-width: 991px) {
