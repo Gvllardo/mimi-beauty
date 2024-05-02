@@ -210,6 +210,10 @@ body {
     border: #f4f4f4;
     border-radius: 20px;
   }
+
+  .card-body{
+    border-radius: 20px;
+  }
   
   .card_box {
     width: 200px;
@@ -354,7 +358,7 @@ body {
     top: 0;
     position: absolute;
     box-sizing: border-box;
-    background-color: #d52884;
+    background-color: #ffb6dd;
     border-radius: 30px;
     padding: 30px;
     width: 450px;
@@ -370,7 +374,7 @@ body {
     border: 13px solid #3B344D;
   }
   .testimonials .item p {
-    color: #ddd;
+    color: #333333;
   }
   .testimonials .item h2 {
     font-size: 14px;
