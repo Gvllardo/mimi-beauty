@@ -75,6 +75,9 @@ body {
     border-radius: 50px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
     /* Agrega una transición suave para el color de fondo y el color del texto */
 }
 
@@ -89,6 +92,9 @@ body {
 .navbar {
     background-color: #ffb6dd;
     height: 100px;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .navbar-brand {
@@ -162,6 +168,59 @@ body {
     border-radius: 20px 20px 0 0; /* Parte inferior redondeada */
     text-align: center;
     position: relative; /* Asegura que el contenido absoluto esté relativo a este elemento */
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #737373;
+}
+
+.title1{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+}
+
+.title2{
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffb6dd;
+  font-size: 50px;
+}
+
+.title3{
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+}
+
+.card-body{
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.subtitle1{
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffb6dd;
+  font-size: 40px;
+  
+}
+
+.table{
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+
 }
 
 /* Estilo para el enlace activo del navbar */
@@ -353,6 +412,10 @@ body {
     min-height: 350px;
     perspective: 800px;
     overflow: hidden;
+    font-family: "IM Fell English", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #737373;
   }
   .testimonials .item {
     top: 0;
