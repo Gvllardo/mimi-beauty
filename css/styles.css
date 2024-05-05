@@ -331,7 +331,7 @@ body {
     position: absolute;
     width: 150%;
     height: 40px;
-    background-image: linear-gradient(45deg, #d82377 0%, #f65fb4  51%, #b21a77  100%);
+    background-image: linear-gradient(45deg, #ffb6dd 0%, #f65fb4  51%, #ffb6dd  100%);
     transform: rotate(-45deg) translateY(-20px);
     display: flex;
     align-items: center;
@@ -350,8 +350,8 @@ body {
     left: 0;
     height: 10px;
     z-index: -1;
-    box-shadow: 140px -140px #cc3f47;
-    background-image: linear-gradient(45deg, #d82377 0%, #f65fb4 51%, #b21a77  100%);
+    box-shadow: 140px -140px #ffb6dd;
+    background-image: linear-gradient(45deg, #ffb6dd 0%, #f65fb4 51%, #ffb6dd 100%);
   }
 
   .container-monitor{
@@ -363,44 +363,7 @@ body {
     padding:4em;
   }
 
-  .monitor {
-    width:750px;
-    height: 400px;
-    overflow-y:scroll;
-    border: solid 1em #333;
-    border-radius:.5em;
-  }
-  .monitor::-webkit-scrollbar {
-        width: 15px;
-  }
-  .monitor::-webkit-scrollbar-thumb {
-    background: #666;
-  }
-  ::-webkit-scrollbar-track {
-        background-color: #888;
-  }
-  .stand:before {
-    content:"";
-    display:block;
-    position:relative;
-    background: #222;
-    width: 150px;
-    height: 50px;
-    top:450px;
-    left:300px;
-  }
-  .stand:after {
-     content:"";
-     display:block;
-     position:relative;
-     background:#333;
-     border-top-left-radius:.5em;
-     border-top-right-radius:.5em;
-     width: 300px;
-     height: 15px;
-     top: 50px;
-     left: 225px;
-  }
+  
   
   
   .valoracion {
@@ -630,116 +593,41 @@ body {
 
   }
 
-  .wrapper {
-    display: inline-flex;
-    list-style: none;
-    height: 120px;
-    width: 100%;
-    padding-top: 40px;
-    font-family: "Poppins", sans-serif;
-    justify-content: center;
-  }
   
-  .wrapper .icon {
-    position: relative;
-    background: #fff;
-    border-radius: 50%;
-    margin: 10px;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip {
-    position: absolute;
-    top: 0;
-    font-size: 14px;
-    background: #fff;
-    color: #fff;
-    padding: 5px 8px;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip::before {
-    position: absolute;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background: #fff;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .icon:hover .tooltip {
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  
-  .wrapper .icon:hover span,
-  .wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wrapper .facebook:hover,
-  .wrapper .facebook:hover .tooltip,
-  .wrapper .facebook:hover .tooltip::before {
-    background: #1877f2;
-    color: #fff;
-  }
-  
-  .wrapper .twitter:hover,
-  .wrapper .twitter:hover .tooltip,
-  .wrapper .twitter:hover .tooltip::before {
-    background: #1da1f2;
-    color: #fff;
-  }
-  
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
-    background: #e4405f;
-    color: #fff;
-  }
   
 
 /* Media Queries */
-@media (min-width: 991px) {
-    .icono {
-        height: auto;
-        width: 35px;
+@media only screen and (max-width: 767px) {
+  /* Estilos para celulares */
+  .btn-whatsapp {
+    bottom: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+  }
+  .agendar-button,
+    .button {
+        font-size: 12px;
+        padding: 6px 16px;
     }
+
+
 }
 
-@media (max-width: 768px) {
-    .title1 {
-        font-size: 20px;
-        /* Tamaño de la fuente del título para pantallas más pequeñas */
-    }
 
-    .subtitle {
-        font-size: 16px;
-        /* Tamaño de la fuente del subtítulo para pantallas más pequeñas */
-    }
-}
-
-@media (max-width: 430px) {
-    .icono {
-        margin: 2px;
-        height: 20px;
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  /* Estilos para tablets */
+  .btn-whatsapp {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    font-size: 15px;
+  }
+  .agendar-button,
+    .button {
+        font-size: 13px;
+        padding: 7px 18px;
     }
 }
