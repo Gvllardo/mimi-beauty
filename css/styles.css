@@ -1,5 +1,11 @@
 body {
     overflow-y: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    
 }
 
 
@@ -174,6 +180,17 @@ body {
     color: #737373;
 }
 
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 .title1{
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
@@ -223,6 +240,14 @@ body {
 
 }
 
+.social-links{
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
 /* Estilo para el enlace activo del navbar */
 .navbar-nav .nav-item.active .nav-link::after {
     width: 100%;
@@ -263,6 +288,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
   }
 
   .card-img-top{
@@ -277,9 +303,9 @@ body {
   .card_box {
     width: 200px;
     height: 250px;
-    background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+    border-radius: 20px;
+    background: transparent;
     position: relative;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
     cursor: pointer;
     transition: all .3s;
   }
@@ -314,11 +340,10 @@ body {
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.23);
   }
   
   .card_box span::after {
-    content: '';
+    content: attr(data-content);
     position: absolute;
     width: 10px;
     bottom: 0;
@@ -592,6 +617,106 @@ body {
     z-index: 4;
   }
 
+  footer{
+    background-color: #fbf1f2;
+    color: #737373;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+  
+
 /* Media Queries */
 @media (min-width: 991px) {
     .icono {
@@ -601,7 +726,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .title {
+    .title1 {
         font-size: 20px;
         /* Tamaño de la fuente del título para pantallas más pequeñas */
     }
