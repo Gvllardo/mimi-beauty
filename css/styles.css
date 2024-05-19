@@ -1,13 +1,17 @@
 body {
-    overflow-y: auto;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    min-height: 100vh;
-    padding-bottom: 80px;
-    
+  overflow-y: auto;
+  margin: 0;
+  padding: 0 0 80px; /* padding-bottom incorporado aquí para evitar repeticiones */
+  position: relative;
+  min-height: 100vh;
+  font-family: 'PT Serif', serif; /* Asegurar consistencia de fuentes */
 }
 
+
+img {
+  max-width: 100%; /* Ensures that images are never wider than their container */
+  height: auto;
+}
 
 .btn-whatsapp{
     position: fixed;
@@ -98,7 +102,7 @@ body {
 /* Estilos del navbar */
 .navbar {
     background-color: #ffb6dd;
-    height: 100px;
+    height: auto;
     font-family: "PT Serif", serif;
     font-weight: 700;
     font-style: normal;
@@ -113,6 +117,8 @@ body {
 .agendar-button {
     margin-right: 100px;
 }
+
+
 
 /* Estilos del navbar toggler */
 .navbar-toggler:not(:disabled):not(.disabled) {
@@ -166,6 +172,32 @@ body {
 .navbar-nav .nav-link:hover {
     color: #ffffff;
     /* Cambia el color del texto al pasar el ratón sobre el enlace */
+}
+
+.presentacion, .container-text-center {
+  padding: 20px;
+  margin-top: 120px;
+
+}
+
+.card_box {
+  width: 100%; /* Full width cards for better mobile viewing */
+  margin-bottom: 20px;
+}
+
+.card_box:hover {
+  transform: none; /* Disable hover effects on mobile */
+}
+
+/* Testimonials and Reviews section */
+.testimonials .item {
+  width: 90%; /* Better fit for mobile screens */
+  padding: 20px;
+  margin: 0 auto; /* Centering the testimonial items */
+}
+
+.dots {
+  bottom: 20px; /* Adjust dot navigation position */
 }
 
 /* Estilos de la sección de presentación */
@@ -436,6 +468,31 @@ body {
     margin: 7px;
     transition: transform 0.2s, color 0.2s;
   }
+
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px; /* Espacio entre los iconos */
+    text-align: center;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el icono y el texto */
+    color: inherit; /* Hereda el color de texto del padre */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.footer-links img {
+    width: 24px; /* Ajusta el tamaño de los íconos */
+    height: auto;
+}
+
   /* First */
   #t-1:checked ~ .dots label[for="t-1"] {
     transform: scale(2);
@@ -584,115 +641,79 @@ body {
 
   }
 
+@media (max-width: 991px) {
+
+  .offcanvas-header {
+    background-color: #ffb6dd; /* Fondo claro para el sidebar */
+    color: #333; /* Texto oscuro para mejor contraste */
+  }
+
+  .offcanvas-body {
+    background-color: #f4f4f4; /* Fondo claro para el sidebar */
+    color: #333; /* Texto oscuro para mejor contraste */
+  }
+
+  .navbar-nav .nav-link {
+      color: #737373; /* Cambia el color del texto a uno más claro u otro de tu elección */
+  }
+
+  .navbar-nav .nav-link::after,
+  .nav-link.active::after {
+      background-color: #ffb6dd;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #ffb6dd !important;
+    /* Cambia el color del texto al seleccionar el enlace */
+}
+}
   
   
 
 /* Media Queries */
-@media only screen and (max-width: 767px) {
-  /* Estilos para celulares */
-  .btn-whatsapp {
-    bottom: 15px;
-    right: 15px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 14px;
-  }
-  a.button {
-    size: 25px;
-    width: 100px;
-    height: 150px;
-    margin-top: -700px;
-    }
+@media (max-width: 767px) {
 
-  .footer-fin{
-    /* Estilos específicos para pantallas con ancho máximo de 767px */
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center  ;
-    size: 20px;
-   
-    }
-
-    .card_box {
-      /* Estilos específicos para el rango de ancho de pantalla de 767px a 1023px */
-      /* Por ejemplo, puedes cambiar el tamaño */
-      width: 70%;
-      height: 70%;
-      /* Puedes ajustar otros estilos según tus necesidades */
+  .navbar {
+      height: auto; /* Altura auto para una mejor visualización en móviles */
+      padding: 10px;
   }
 
-  .presentacion{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    font-size: 10px;
-    font-style: normal;
-    text-align: center;
+  .presentacion, .container-text-center, .navbar-brand, .agendar-button, .button {
+      padding: 10px;
+      font-size: smaller; /* Texto más pequeño para dispositivos móviles */
   }
 
-  .presentacion h5{
-    margin-top: 50px;
+  .card_box {
+      width: 100%; /* Las tarjetas ocupan el ancho completo */
+      margin-bottom: 150px;
   }
+  
 
-  .responsive-iframe {
-    width: 100%;
-    height: 100%;
-  }
-
-  .testimonials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 350px;
-    perspective: 200px;
-    overflow: hidden;
-
-  }
   .testimonials .item {
-    position: absolute;
-    border-radius: 70px;
-    padding: 30px;
-    width: 400px;
-    text-align: center;
+      width: 100%; /* Ajuste para que los testimonios ocupen el ancho completo */
+      padding: 15px;
+      margin: 10px auto;
   }
-
-  .container-text-center{
-    height: 30%;
-  }
-
-  .col-md-auto{
-    width: 12rem;
-    margin-top: 10px;
-  }
-
-  .col-md-auto h1.subtitle1{
-    font-size: 30px;
-    text-align: center;
-
-  }
-
-  .table{
-    width: 50%;
-    height: 90%;
-    font-size: 13px;
-  }
-
 
 }
 
+/* Media Queries for devices larger than 600px */
+@media (min-width: 600px) {
+
+  .navbar-brand img {
+      height: 80px;
+  }
+
+  .button, .agendar-button {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}
+
+
 
 @media only screen and (min-width: 767px) and (max-width: 1023px) {
-  /* Estilos para tablets */
-  .btn-whatsapp {
-    width: 65px;
-    height: 65px;
-    line-height: 65px;
-    font-size: 15px;
-  }
+
   .agendar-button,
     .button {
         font-size: 13px;
