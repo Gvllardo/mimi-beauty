@@ -1,7 +1,8 @@
 body {
+  height: 100%;
   overflow-y: auto;
   margin: 0;
-  padding: 0 0 80px; /* padding-bottom incorporado aquí para evitar repeticiones */
+  padding: 0; /* padding-bottom incorporado aquí para evitar repeticiones */
   position: relative;
   min-height: 100vh;
   font-family: 'PT Serif', serif; /* Asegurar consistencia de fuentes */
@@ -470,28 +471,9 @@ img {
   }
 
 
-  .footer-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 10px; /* Espacio entre los iconos */
-    text-align: center;
-}
-
-.footer-links a {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Espacio entre el icono y el texto */
-    color: inherit; /* Hereda el color de texto del padre */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-}
-
-.footer-links img {
-    width: 24px; /* Ajusta el tamaño de los íconos */
-    height: auto;
-}
+  .bg-custom {
+    background-color: #ffb6dd; /* Nuevo color de fondo, cambia esto según tus preferencias */
+  }
 
   /* First */
   #t-1:checked ~ .dots label[for="t-1"] {
@@ -628,19 +610,6 @@ img {
     z-index: 4;
   }
 
-  footer{
-    background-color: #fbf1f2;
-    color: #737373;
-    width: 100%;
-    height: 100px;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-
-  }
-
 @media (max-width: 991px) {
 
   .offcanvas-header {
@@ -683,7 +652,7 @@ img {
       font-size: smaller; /* Texto más pequeño para dispositivos móviles */
   }
 
-  .card_box {
+  .card_margin_button{
       width: 100%; /* Las tarjetas ocupan el ancho completo */
       margin-bottom: 150px;
   }
